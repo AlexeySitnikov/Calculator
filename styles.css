@@ -1,0 +1,86 @@
+.calculatorFrame {
+  border: 2px solid black;
+}
+
+.outputLine {
+  text-align: right;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.button9 {
+  font-size: 50px;
+  color: red;
+}
+
+.button8 {
+  font-size: 30px;
+  color: green;
+  border: 5 px dotted darkblue;
+}
+
+.button7 {
+  font-size: 25px;
+  color: yellow;
+}
+
+.button6 {
+  font-size: 50px;
+  color: blueviolet;
+  border: 5 px dotted darkblue;
+}
+.button5 {
+  font-size: 50px;
+  font-style: italic;
+  border: 5 px dotted darkblue;
+}
+.button4 {
+  font-size: 25px;
+  border-radius: 50%;
+}
+.button3 {
+  font-size: 25px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: aqua;
+}
+.button2 {
+  font-size: 25px;
+  border-radius: 25%;
+  border-width: 5 px;
+  border-style: dotted;
+  border-color: darkblue;
+}
+.button1 {
+  font-size: 25px;
+  border-color: rgb(179, 4, 156);
+}
+
+.button0 {
+  font-size: 25px;
+}
+
+.buttonPlus {
+  font-size: 30px;
+}
+
+.buttonMinus {
+  font-size: 30px;
+}
+
+.buttonMultiply {
+  font-size: 30px;
+}
+
+.buttonDot {
+  font-size: 35px;
+}
+
+.buttonEqual {
+  font-size: 35px;
+}
+
+.buttonDivide {
+  font-size: 35px;
+}
