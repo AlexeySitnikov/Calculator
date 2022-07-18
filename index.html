@@ -6,7 +6,7 @@
     <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
-    <input id="outputLine" type="text" class="outputLine" value="0"></input>
+    <input id="outputLine" type="text" class="outputLine" value=""></input>
     
     <div>
       <table class="calculatorFrame">
@@ -39,10 +39,127 @@
       </table>
     </div>
     
-    <script>
-      function button6(){
-        
+    <script> 
+    let fisrtOperand = 0     
+    let secondOperand = 0
+    let actionFlag = false
+    let addFlag = false
+    let divideFlag = false
+    let multiplyFlag = false
+    let minusFlag = false
+
+      function button9(){ 
+        if (actionFlag===false){
+          fisrtOperand = 9
+          document.getElementById("outputLine").value = "first = " + fisrtOperand;
+        } else{
+          secondOperand = 9
+          document.getElementById("outputLine").value = secondOperand;
+        }
       }
+      function button8(){
+        if (actionFlag===false){
+          fisrtOperand = 8
+          document.getElementById("outputLine").value = fisrtOperand;
+        } else{
+          secondOperand = 8
+          document.getElementById("outputLine").value = "second = " + secondOperand;
+        }
+      }
+      function button7(){        
+        if (actionFlag===false){
+          fisrtOperand = 7
+          document.getElementById("outputLine").value = fisrtOperand;
+        } else{
+          secondOperand = 7
+          document.getElementById("outputLine").value = secondOperand;
+        }
+      }
+      function button6(){
+        if (actionFlag===false){
+          fisrtOperand = 6
+          document.getElementById("outputLine").value = fisrtOperand;
+        } else{
+          secondOperand = 6
+          document.getElementById("outputLine").value = secondOperand;
+        }
+      }
+      function button5(){
+        if (actionFlag===false){
+          fisrtOperand = 5
+          document.getElementById("outputLine").value = fisrtOperand;
+        } else{
+          secondOperand = 5
+          document.getElementById("outputLine").value = secondOperand;
+        }
+      }
+      function button4(){
+        if (actionFlag===false){
+          fisrtOperand = 4
+          document.getElementById("outputLine").value = fisrtOperand;
+        } else{
+          secondOperand = 4
+          document.getElementById("outputLine").value = secondOperand;
+        }
+      }
+      function button3(){
+        if (actionFlag===false){
+          fisrtOperand = 3
+          document.getElementById("outputLine").value = fisrtOperand;
+        } else{
+          secondOperand = 3
+          document.getElementById("outputLine").value = secondOperand;
+        }
+      }
+      function button2(){
+        if (actionFlag===false){
+          fisrtOperand = 2
+          document.getElementById("outputLine").value = fisrtOperand;
+        } else{
+          secondOperand = 2
+          document.getElementById("outputLine").value = secondOperand;
+        }
+      }
+      function button1(){
+        if (actionFlag===false){
+          fisrtOperand = 1
+          document.getElementById("outputLine").value = fisrtOperand;
+        } else{
+          secondOperand = 1
+          document.getElementById("outputLine").value = secondOperand;
+        }
+      }
+
+      function buttonPlus(){
+        addFlag = true
+        actionFlag = true
+      }
+      function buttonDivide(){
+        divideFlag = true
+        actionFlag = true
+      }
+      function buttonMinus(){
+        minusFlag = true
+        actionFlag = true
+      }
+      function buttonMultiply(){
+        multiplyFlag = true
+        actionFlag = true
+      }
+
+      function buttonEqual(){
+        // if (addFlag===true){
+        //   document.getElementById("outputLine").value = (firstOperand + secondOperand);
+        // } else if (minusFlag===true){
+        //   document.getElementById("outputLine").value = (firstOperand - secondOperand);
+        // } else if (multiplyFlag===true){
+        //   document.getElementById("outputLine").value = (firstOperand * secondOperand);
+        // } else if (divideFlag===true){
+        //   document.getElementById("outputLine").value = (firstOperand / secondOperand);
+        // }
+        document.getElementById("outputLine").value = firstOperand ;
+      }
+      
     </script>
   </body>
 </html>
