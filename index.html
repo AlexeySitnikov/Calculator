@@ -12,28 +12,31 @@
       <table class="calculatorFrame">
         <thead></thead>
         <tr class="firstLine">
-          <td><button onclick="button7()" class="button7">7</button></td>
-          <td><button onclick="button8()" class="button8">8</button></td>
-          <td><button onclick="button9()" class="button9">9</button></td>
-          <td><button onclick="buttonPlus()" class="buttonPlus">+</button></td>
+          <td><button onclick="buttonDigits()" class="buttonDigits">7</button></td>
+          <td><button onclick="button8()" class="buttonDigits">8</button></td>
+          <td><button onclick="button9()" class="buttonDigits">9</button></td>
+          <td><button onclick="buttonPlus()" class="buttonDigits">+</button></td>
         </tr>
         <tr class="secondLine">
-          <td><button onclick="button4()" class="button4">4</button></td>
-          <td><button onclick="button5()" class="button5">5</button></td>
-          <td><button onclick="button6()" class="button6">6</button></td>
-          <td><button onclick="buttonMinus()" class="buttonMinus">-</button></td>
+          <td><button onclick="button4()" class="buttonDigits">4</button></td>
+          <td><button onclick="button5()" class="buttonDigits">5</button></td>
+          <td><button onclick="button6()" class="buttonDigits">6</button></td>
+          <td><button onclick="buttonMinus()" class="buttonDigits">-</button></td>
         </tr>
         <tr class="thirdLine">
-          <td><button onclick="button1()" class="button1">1</button></td>
-          <td><button onclick="button2()" class="button2">2</button></td>
-          <td><button onclick="button3()" class="button3">3</button></td>
-          <td><button onclick="buttonMultiply()" class="buttonMultiply">*</button></td>
+          <td><button onclick="button1()" class="buttonDigits">1</button></td>
+          <td><button onclick="button2()" class="buttonDigits">2</button></td>
+          <td><button onclick="button3()" class="buttonDigits">3</button></td>
+          <td><button onclick="buttonMultiply()" class="buttonDigits">*</button></td>
         </tr>
         <tr class="forthLine">
-          <td><button onclick="button0()" class="button0">0</button></td>
-          <td><button onclick="buttonDot()" class="buttonDot">.</button></td>
-          <td><button onclick="buttonEqual()" class="buttonEqual">=</button></td>
-          <td><button onclick="buttonDivide()" class="buttonDivide">/</button></td>
+          <td><button onclick="button0()" class="buttonDigits">0</button></td>
+          <td><button onclick="buttonDot()" class="buttonDigits">.</button></td>
+          <td><button onclick="buttonEqual()" class="buttonDigits">=</button></td>
+          <td><button onclick="buttonDivide()" class="buttonDigits">/</button></td>
+        </tr>
+        <tr class="fifthLine">
+          <th colspan="4"><button onclick="buttonErase()" class="buttonErase">Erase</button></th>
         </tr>
         <tfoot></tfoot>
       </table>
@@ -47,88 +50,10 @@
     let divideFlag = false
     let multiplyFlag = false
     let minusFlag = false
-
-      function button9(){ 
-        if (actionFlag===false){
-          fisrtOperand = 9
-          document.getElementById("outputLine").value = "first = " + fisrtOperand;
-        } else{
-          secondOperand = 9
-          document.getElementById("outputLine").value = secondOperand;
-        }
-      }
-      function button8(){
-        if (actionFlag===false){
-          fisrtOperand = 8
-          document.getElementById("outputLine").value = fisrtOperand;
-        } else{
-          secondOperand = 8
-          document.getElementById("outputLine").value = "second = " + secondOperand;
-        }
-      }
-      function button7(){        
-        if (actionFlag===false){
-          fisrtOperand = 7
-          document.getElementById("outputLine").value = fisrtOperand;
-        } else{
-          secondOperand = 7
-          document.getElementById("outputLine").value = secondOperand;
-        }
-      }
-      function button6(){
-        if (actionFlag===false){
-          fisrtOperand = 6
-          document.getElementById("outputLine").value = fisrtOperand;
-        } else{
-          secondOperand = 6
-          document.getElementById("outputLine").value = secondOperand;
-        }
-      }
-      function button5(){
-        if (actionFlag===false){
-          fisrtOperand = 5
-          document.getElementById("outputLine").value = fisrtOperand;
-        } else{
-          secondOperand = 5
-          document.getElementById("outputLine").value = secondOperand;
-        }
-      }
-      function button4(){
-        if (actionFlag===false){
-          fisrtOperand = 4
-          document.getElementById("outputLine").value = fisrtOperand;
-        } else{
-          secondOperand = 4
-          document.getElementById("outputLine").value = secondOperand;
-        }
-      }
-      function button3(){
-        if (actionFlag===false){
-          fisrtOperand = 3
-          document.getElementById("outputLine").value = fisrtOperand;
-        } else{
-          secondOperand = 3
-          document.getElementById("outputLine").value = secondOperand;
-        }
-      }
-      function button2(){
-        if (actionFlag===false){
-          fisrtOperand = 2
-          document.getElementById("outputLine").value = fisrtOperand;
-        } else{
-          secondOperand = 2
-          document.getElementById("outputLine").value = secondOperand;
-        }
-      }
-      function button1(){
-        if (actionFlag===false){
-          fisrtOperand = 1
-          document.getElementById("outputLine").value = fisrtOperand;
-        } else{
-          secondOperand = 1
-          document.getElementById("outputLine").value = secondOperand;
-        }
-      }
+      
+      function buttonDigits(){        
+        document.getElementById("outputLine").value = ;        
+      }      
 
       function buttonPlus(){
         addFlag = true
@@ -147,19 +72,30 @@
         actionFlag = true
       }
 
-      function buttonEqual(){
-        // if (addFlag===true){
-        //   document.getElementById("outputLine").value = (firstOperand + secondOperand);
-        // } else if (minusFlag===true){
-        //   document.getElementById("outputLine").value = (firstOperand - secondOperand);
-        // } else if (multiplyFlag===true){
-        //   document.getElementById("outputLine").value = (firstOperand * secondOperand);
-        // } else if (divideFlag===true){
-        //   document.getElementById("outputLine").value = (firstOperand / secondOperand);
-        // }
-        document.getElementById("outputLine").value = firstOperand ;
+      function buttonErase(){
+        let fisrtOperand = 0     
+        let secondOperand = 0
+        let actionFlag = false
+        let addFlag = false
+        let divideFlag = false
+        let multiplyFlag = false
+        let minusFlag = false
+        document.getElementById("outputLine").value = "";
       }
-      
+
+      function buttonEqual(){
+        if (addFlag===true){
+          document.getElementById("outputLine").value = (fisrtOperand + secondOperand);
+        } else if (minusFlag===true){
+          document.getElementById("outputLine").value = (fisrtOperand - secondOperand);
+        } else if (multiplyFlag===true){
+          document.getElementById("outputLine").value = (fisrtOperand * secondOperand);
+        } else if (divideFlag===true){
+          document.getElementById("outputLine").value = (fisrtOperand / secondOperand);
+        }
+        //document.getElementById("outputLine").value = fisrtOperand ;
+      }
+
     </script>
   </body>
 </html>
