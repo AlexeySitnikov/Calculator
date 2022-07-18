@@ -13,25 +13,25 @@
         <thead></thead>
         <tr class="firstLine">
           <td><button onclick="buttonDigits()" class="buttonDigits">7</button></td>
-          <td><button onclick="button8()" class="buttonDigits">8</button></td>
-          <td><button onclick="button9()" class="buttonDigits">9</button></td>
+          <td><button onclick="buttonDigits()" class="buttonDigits">8</button></td>
+          <td><button onclick="buttonDigits()" class="buttonDigits">9</button></td>
           <td><button onclick="buttonPlus()" class="buttonDigits">+</button></td>
         </tr>
         <tr class="secondLine">
-          <td><button onclick="button4()" class="buttonDigits">4</button></td>
-          <td><button onclick="button5()" class="buttonDigits">5</button></td>
-          <td><button onclick="button6()" class="buttonDigits">6</button></td>
+          <td><button onclick="buttonDigits()" class="buttonDigits">4</button></td>
+          <td><button onclick="buttonDigits()" class="buttonDigits">5</button></td>
+          <td><button onclick="buttonDigits()" class="buttonDigits">6</button></td>
           <td><button onclick="buttonMinus()" class="buttonDigits">-</button></td>
         </tr>
         <tr class="thirdLine">
-          <td><button onclick="button1()" class="buttonDigits">1</button></td>
-          <td><button onclick="button2()" class="buttonDigits">2</button></td>
-          <td><button onclick="button3()" class="buttonDigits">3</button></td>
+          <td><button onclick="buttonDigits()" class="buttonDigits">1</button></td>
+          <td><button onclick="buttonDigits()" class="buttonDigits">2</button></td>
+          <td><button onclick="buttonDigits()" class="buttonDigits">3</button></td>
           <td><button onclick="buttonMultiply()" class="buttonDigits">*</button></td>
         </tr>
         <tr class="forthLine">
-          <td><button onclick="button0()" class="buttonDigits">0</button></td>
-          <td><button onclick="buttonDot()" class="buttonDigits">.</button></td>
+          <td><button onclick="buttonDigits()" class="buttonDigits">0</button></td>
+          <td><button onclick="buttonDigits()" class="buttonDigits">.</button></td>
           <td><button onclick="buttonEqual()" class="buttonDigits">=</button></td>
           <td><button onclick="buttonDivide()" class="buttonDigits">/</button></td>
         </tr>
@@ -53,7 +53,8 @@
     let abc = ""
       
       function buttonDigits(){        
-        abc += document.getElementById("outputLine").value;
+        //document.getElementById("outputLine").value;
+        abc += document.getElementsByClassName("buttonDigits").item
         document.getElementById("outputLine").value = abc;        
       }      
 
