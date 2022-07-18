@@ -50,9 +50,11 @@
     let divideFlag = false
     let multiplyFlag = false
     let minusFlag = false
+    let abc = ""
       
       function buttonDigits(){        
-        document.getElementById("outputLine").value = ;        
+        abc += document.getElementById("outputLine").value;
+        document.getElementById("outputLine").value = abc;        
       }      
 
       function buttonPlus(){
