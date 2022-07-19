@@ -2,7 +2,7 @@
   border: 2px solid black;
   width: 200px;
   margin: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 00px;
 }
 
 .outputLine {
@@ -21,7 +21,7 @@
   background-color: bisque;
 }
 
-.buttonErase{
+.buttonErase {
   font-size: 25px;
   border-radius: 50%;
   border-width: 4px;
