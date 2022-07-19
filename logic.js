@@ -1,23 +1,11 @@
 let fisrtOperand = 0;
 let secondOperand = 0;
-let actionFlag = false;
 let addFlag = false;
 let divideFlag = false;
 let multiplyFlag = false;
 let minusFlag = false;
 let abc = "";
 let wasDot = false;
-
-function buttonDigits(digit) {
-  if (digit === 10 && wasDot === false) {
-    abc += ".";
-    document.getElementById("outputLine").value = abc;
-    wasDot = true;
-  } else {
-    abc += digit;
-    document.getElementById("outputLine").value = abc;
-  }
-}
 
 function buttonOperation(operation) {
   fisrtOperand = Number(document.getElementById("outputLine").value);
@@ -37,7 +25,6 @@ function buttonOperation(operation) {
 function buttonErase() {
   fisrtOperand = 0;
   secondOperand = 0;
-  actionFlag = false;
   addFlag = false;
   divideFlag = false;
   multiplyFlag = false;
@@ -65,4 +52,45 @@ function buttonEqual() {
   }
   document.getElementById("outputLine").value = result;
   fisrtOperand = result;
+}
+
+document.querySelector(".buttons").addEventListener("click", handleClick);
+
+function handleClick(event) {
+  if (event.target.tagName !== "BUTTON") {
+    return;
+  }
+
+  let buttonValue = event.target.innerText;
+  if (buttonValue === "." && wasDot !== true) {
+    abc += ".";
+    document.getElementById("outputLine").value = abc;
+    wasDot = true;
+  } else if (
+    buttonValue === "1" ||
+    buttonValue === "2" ||
+    buttonValue === "3" ||
+    buttonValue === "4" ||
+    buttonValue === "5" ||
+    buttonValue === "6" ||
+    buttonValue === "7" ||
+    buttonValue === "8" ||
+    buttonValue === "9" ||
+    buttonValue === "0"
+  ) {
+    abc += buttonValue;
+    document.getElementById("outputLine").value = abc;
+  } else if (
+    buttonValue === "+" ||
+    buttonValue === "-" ||
+    buttonValue === "*" ||
+    buttonValue === "/"
+  ) {
+    buttonOperation(buttonValue);
+  } else if (buttonValue === "=") {
+    buttonEqual();
+  } else if (buttonValue === "Erase") {
+    buttonErase();
+  }
+  document.querySelector("#result").innerText = buttonValue;
 }
