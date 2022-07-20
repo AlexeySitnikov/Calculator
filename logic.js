@@ -92,5 +92,4 @@ function handleClick(event) {
   } else if (buttonValue === "Erase") {
     buttonErase();
   }
-  document.querySelector("#result").innerText = buttonValue;
 }
