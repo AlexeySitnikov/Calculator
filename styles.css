@@ -92,10 +92,6 @@ video {
 .calculatorFrame {
   border: 2px solid black;
   width: 220px;
-  /* margin-left: 50%; /* как установить отступ 50%- половина ширины рамки !сделать 0 auto
-  margin-bottom: 0px; */
-
-  
   margin: 0 auto;
   padding: 0px;
   background-color: burlywood;
