@@ -47,8 +47,15 @@ function buttonEqual() {
     multiplyFlag = false;
     result = fisrtOperand * secondOperand;
   } else if (divideFlag === true) {
-    divideFlag = false;
-    result = fisrtOperand / secondOperand;
+    if (secondOperand !== 0){
+      divideFlag = false;
+      result = fisrtOperand / secondOperand;
+    } else {
+      alert("Division by zero!");
+      buttonErase();
+      return;      
+    }
+    
   }
   document.getElementById("outputLine").value = result;
   fisrtOperand = result;
