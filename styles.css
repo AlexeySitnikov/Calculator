@@ -1,9 +1,10 @@
 .calculatorFrame {
   border: 2px solid black;
   width: 200px;
-  margin: 0px;
+  margin-left: 50%; /* как установить отступ 50%- половина ширины рамки */
   margin-bottom: 0px;
   padding: 0px;
+  background-color: burlywood;
 }
 
 .outputLine {
@@ -11,12 +12,15 @@
   font-size: 24px;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 99%; /* как установить правильную ширину */
   border-color: transparent;
   border-bottom: 1px solid;
+  border-right: 2px solid;
+  background-color: antiquewhite;
 }
 
-.buttons > button{
+.buttonDigits {
+  margin: 2px;
   font-size: 25px;
   border-radius: 50%;
   border-width: 4px;
@@ -26,9 +30,17 @@
 }
 
 .buttonErase {
-  width: 100px;
+  width: 80px;
+  padding-left: 2px;
   font-size: 25px;
-  border-radius: 50%;
+  border-radius: 40%;
   border-width: 4px;
-  background-color: bisque;
+  background-color: red;
+  margin: auto;
+  display: flex;
+}
+
+.buttons {
+  padding: 5px;
+  text-align: center;
 }
