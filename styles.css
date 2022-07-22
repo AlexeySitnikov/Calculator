@@ -102,10 +102,9 @@ video {
   font-size: 24px;
   padding: 0;
   margin: 0;
-  width: 100%; /* как установить правильную ширину */
+  width: 100%; 
   border-color: transparent;
-  border-bottom: 1px solid;
-  /* border-right: 2px solid; */
+  border-bottom: 1px solid; 
   background-color: antiquewhite;
 }
 
